@@ -1,0 +1,50 @@
+/* load the default Redmine stylesheet */
+@import url(/application.css);
+
+:root {
+    --color-primary: #004dc2;
+    --issue-color: #ffffff;
+    --sidebar-color: #f0f0f0;
+}
+
+@media all and (max-width: 899px) {
+    #wrapper  #header {
+        background-color: var(--color-primary);
+    }
+    #wrapper .flyout-menu {
+        color: #000000;
+        background-color: var(--sidebar-color);
+    }
+    #wrapper .flyout-menu a {
+        color: #000000;
+    }
+    #wrapper .flyout-menu__search {
+        background: var(--color-primary);
+    }
+    #wrapper .flyout-menu h3 {
+        color: white;
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        background-color: var(--color-primary);
+    }
+    #wrapper #sidebar-wrapper a.selected {
+        background-color: #9DB9D5;
+    }
+}
+
+#top-menu {
+    background: var(--color-primary);
+}
+
+#header {
+    background: var(--color-primary);
+    background-color: var(--color-primary);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    color: #fff;
+    min-height: 1.2em;
+    padding: 30px 30px
+}
+
+div.issue {
+    background: var(--issue-color);
+}
