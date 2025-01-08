@@ -1,6 +1,11 @@
 /* load the default Redmine stylesheet */
 @import url(/application.css);
 
+* {
+    /* prevent font resizing while loading a page */
+    --fonts-main: "Noto", Arial, sans-serif;
+}
+
 :root {
     --color-primary: #004dc2;
     --issue-color: #ffffff;
