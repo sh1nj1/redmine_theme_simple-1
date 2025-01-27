@@ -14,7 +14,7 @@
 
 @media all and (max-width: 899px) {
     #wrapper  #header {
-        background-color: var(--color-primary);
+        background-color: var(--color-primary) !important;
     }
     #wrapper .flyout-menu {
         color: #000000;
@@ -27,7 +27,7 @@
         background: var(--color-primary);
     }
     #wrapper .flyout-menu h3 {
-        color: white;
+        color: white !important;
         border-top: 1px solid #000000;
         border-bottom: 1px solid #000000;
         background-color: var(--color-primary);
