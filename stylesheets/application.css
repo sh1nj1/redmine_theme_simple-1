@@ -18,8 +18,33 @@
     color: #000000;
 }
 
+/*
 html[data-theme="dark"] {
+
     --color-primary: #ffb01b;
+
+    body a, a:link {
+        color: #332200;
+    }
+    body a:visited, a:hover, a:focus {
+        color: #664400;
+    }
+    body img, svg {
+        filter: invert(100%);
+    }
+    body .mermaid svg {
+        background-color: #eeeeee;
+    }
+    body {
+        filter: invert(100%);
+    }
+}
+
+*/ /* if you allow the user to switch themes, you can use this selector */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #ffb01b;
+    }
 
     body a, a:link {
         color: #332200;

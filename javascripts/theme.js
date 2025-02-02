@@ -1,17 +1,13 @@
+const allowThemeSwitch = false;
+
 document.addEventListener('DOMContentLoaded', function () {
 
-  let theme = 'light';
-  if (localStorage.getItem('theme')) {
-    if (localStorage.getItem('theme') === 'dark') {
+  let theme = localStorage.getItem('theme');
+  if (!localStorage.getItem('theme')) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       theme = 'dark';
     }
-  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    theme = 'dark';
   }
-
-  /*
-  And here is the edit to the second block of JS, plus related HTML. `theme_switch` toggles the theme, while `theme_OS` automatically updates the site's theme with changes to the OS theme.
-  */
 
   function theme_apply() {
     'use strict';
@@ -46,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // add toggle button to account list
   const accountList = document.querySelector('#account ul');
-  if (accountList) {
+  if (allowThemeSwitch && accountList) {
     const li = document.createElement('li');
     const btn = document.createElement('a');
     btn.id = 'theme-toggle';
