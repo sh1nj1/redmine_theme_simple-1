@@ -5,6 +5,7 @@ A simple theme for Redmine.
 * changing favicon - favicon/favicon.ico
 * changing header color - --color-primary
 * changing background of issue detail color --issue-color
+* supports dark mode
 
 # References
 

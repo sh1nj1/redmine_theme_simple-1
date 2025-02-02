@@ -12,10 +12,15 @@
     --sidebar-color: #f0f0f0;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-primary: #ffb01b;
-    }
+#theme-toggle {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+}
+
+html[data-theme="dark"] {
+    --color-primary: #ffb01b;
+
     body a, a:link {
         color: #332200;
     }
